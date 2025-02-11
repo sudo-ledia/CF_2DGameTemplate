@@ -72,7 +72,7 @@ public class PlayerMovementDict : MonoBehaviour
         inventoryDisplay.text = "";
         foreach (var item in myInventoryDict)
         {
-            inventoryDisplay.text += "Item: " + item.Key + ", Quantity: " + item.Value + "\n";
+            inventoryDisplay.text += item.Key + ": " + item.Value + "\n";
         }
     }
 }

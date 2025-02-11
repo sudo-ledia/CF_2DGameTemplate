@@ -147,5 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: iron sword
+  itemIndex: 3
   myPlayer: {fileID: 0}
   itemNumber: 1

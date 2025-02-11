@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5817691326199676311}
   - component: {fileID: 5670752724071105821}
-  - component: {fileID: -8596024838504391197}
+  - component: {fileID: 3078593133482270488}
   - component: {fileID: -1938647767162373428}
   m_Layer: 0
   m_Name: potion
@@ -86,20 +86,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8596024838504391197
+--- !u!114 &3078593133482270488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666736532722719471}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dfad5de8ac0afe49871b4855b3916b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ad552d6757819c4bacff6225ae8e0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: potion
+  itemName: Potion
+  itemIndex: 2
   myPlayer: {fileID: 0}
+  itemNumber: 1
 --- !u!60 &-1938647767162373428
 PolygonCollider2D:
   m_ObjectHideFlags: 0
