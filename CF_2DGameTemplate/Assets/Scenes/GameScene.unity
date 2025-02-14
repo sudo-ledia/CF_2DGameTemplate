@@ -3468,7 +3468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1416968193}
   player: {fileID: 2032386032}
-  speed: 0.02
+  speed: 0.2
   inventoryDisplay: {fileID: 1460034146}
 --- !u!1001 &2297799559719700931
 PrefabInstance:
