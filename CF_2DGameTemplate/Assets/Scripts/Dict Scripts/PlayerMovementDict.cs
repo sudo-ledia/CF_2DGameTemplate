@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerMovementDict : MonoBehaviour
 {
     public static PlayerMovementDict Instance;
+    public GameManager gameManager;
 
     public GameObject player;
     public float speed = 0.5f;
@@ -14,6 +15,8 @@ public class PlayerMovementDict : MonoBehaviour
     public Dictionary<string, int> myInventoryDict = new Dictionary<string, int>();
 
     public TextMeshProUGUI inventoryDisplay;
+
+    Vector3 originalPos;
 
     private void Awake()
     {
@@ -29,7 +32,8 @@ public class PlayerMovementDict : MonoBehaviour
     }
     void Start()
     {
-        myInventoryDict.Add("Sword", 1);
+        originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        // myInventoryDict.Add("Sword", 1);
         DisplayInventory();
     }
     void Update()
@@ -62,8 +66,16 @@ public class PlayerMovementDict : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy"){
-            Destroy(player);
+        if (collision.gameObject.tag == "Enemy")
+        {   
+            myInventoryDict[""] = 0;
+            gameObject.transform.position = originalPos;
+            gameManager.DeathScene();
+        }
+        else if (collision.gameObject.tag == "Transition")
+        {
+            gameObject.transform.position = originalPos;
+            gameManager.EndScene();
         }
     }
 

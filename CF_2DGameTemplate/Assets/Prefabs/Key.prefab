@@ -98,10 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad552d6757819c4bacff6225ae8e0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Key
+  itemName: key
   itemIndex: 1
   myPlayer: {fileID: 0}
   itemNumber: 1
+  dialogueManager: {fileID: 0}
+  pickup: {fileID: 0}
 --- !u!60 &3874367695063429970
 PolygonCollider2D:
   m_ObjectHideFlags: 0

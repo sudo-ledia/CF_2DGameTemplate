@@ -39,5 +39,29 @@ public class GameManager : MonoBehaviour
             //or
             // SceneManager.Load("GameScene");
         }
+
+        if(Input.GetKey(KeyCode.Space) && SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+            //or
+            // SceneManager.Load("GameScene");
+        }
+
+        if(Input.GetKey(KeyCode.Space) && SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+            //or
+            // SceneManager.Load("GameScene");
+        }
+    }
+
+    public void EndScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+
+    public void DeathScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
